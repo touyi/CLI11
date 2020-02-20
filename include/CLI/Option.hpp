@@ -6,6 +6,7 @@
 
 #pragma once
 
+// #[CLI11:public_includes:set]
 #include <algorithm>
 #include <functional>
 #include <memory>
@@ -14,6 +15,7 @@
 #include <tuple>
 #include <utility>
 #include <vector>
+// #[CLI11:public_includes:end]
 
 #include "CLI/Error.hpp"
 #include "CLI/Macros.hpp"
@@ -22,6 +24,7 @@
 #include "CLI/Validators.hpp"
 
 namespace CLI {
+// [CLI11:option_hpp:verbatim]
 
 using results_t = std::vector<std::string>;
 /// callback function definition
@@ -1272,4 +1275,5 @@ class Option : public OptionBase<Option> {
     }
 }; // namespace CLI
 
+// [CLI11:option_hpp:end]
 } // namespace CLI

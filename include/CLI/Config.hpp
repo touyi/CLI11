@@ -6,19 +6,21 @@
 
 #pragma once
 
+// [CLI11:public_includes:set]
 #include <algorithm>
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <utility>
 #include <vector>
+// [CLI11:public_includes:set]
 
 #include "CLI/App.hpp"
 #include "CLI/ConfigFwd.hpp"
 #include "CLI/StringTools.hpp"
 
 namespace CLI {
-
+// [CLI11:config_hpp:verbatim]
 namespace detail {
 
 inline std::string convert_arg_for_ini(const std::string &arg) {
@@ -343,4 +345,5 @@ ConfigBase::to_config(const App *app, bool default_also, bool write_description,
     return out.str();
 }
 
+// [CLI11:config_hpp:end]
 } // namespace CLI
